@@ -1,0 +1,16 @@
+# Aktifkan URL rewriting
+RewriteEngine On
+
+# Redirect ke index.php jika file/folder tidak ditemukan
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Nonaktifkan direktori listing
+Options -Indexes
+
+# Proteksi file .env atau konfigurasi penting
+<FilesMatch "^(\.env|config\.php|composer\.json|composer\.lock)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

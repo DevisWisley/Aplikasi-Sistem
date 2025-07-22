@@ -1,0 +1,43 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+RewriteBase /
+
+# Sembunyikan ekstensi .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirect semua URL ke index.php jika file/folder tidak ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Blokir akses langsung ke folder tertentu (contoh: config, private, uploads/private)
+<Directory "config">
+    Order allow,deny
+    Deny from all
+</Directory>
+
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Set default charset dan timezone
+AddDefaultCharset UTF-8
+SetEnv TZ Asia/Jakarta
+
+# Kompresi (gzip)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript text/javascript
+</IfModule>
+
+# Cache kontrol
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
