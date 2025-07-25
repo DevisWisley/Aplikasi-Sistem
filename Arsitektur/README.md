@@ -8,25 +8,89 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 
 ## ✨ Fitur
 
-- 🔐 Autentikasi Login dan Session Management
-- 🧑‍💼 CRUD Data Akun (Admin & Pengunjung)
-- 🖼️ Hero Section (Background Gambar, Judul Tengah)
-- 🏷️ Produk Grid: Gambar, Judul, Deskripsi, Harga, Rating, Tombol Detail dan Tombol Keranjang
-- 📄 Detail Produk: Judul, Gambar Produk, Deskripsi, Fitur Utama, Spesifikasi Teknis, Tim Proyek, Galeri Proyek, Tombol Checkout
-- 💳 Halaman Checkout: Email, Nama, No Telepon, Metode Pembayaran, Total, Tombol Struk
-- 🛒 Keranjang Kuning: Ikon dan tombol keranjang berwarna kuning untuk menarik perhatian pengguna dan meningkatkan pengalaman pengguna saat menambahkan produk 
-- ℹ️ About Section: Profile, Nama, Karir, Deskripsi, Tombol Hubungi
-- 📩 Form Kontak dengan penyimpanan ke database
-- 📊 Dashboard Statistik Pengguna, Produk, Transaksi (Chart.js)
-- 📈 Tabel Interaktif dengan DataTables (search, sort, pagination)
-- ✨ Animasi Masuk saat scroll dengan AOS
-- 📝 Editor Konten menggunakan CKEditor
-- 📁 Upload & Preview Foto Profil
-- 📂 Halaman Tambah & Edit Akun dengan Validasi
-- 🛑 Konfirmasi Aksi dengan SweetAlert2
-- 📉 Grafik interaktif jumlah pengguna per role
-- 📱 Desain responsif (Bootstrap + Tailwind CSS)
-- 🌐 URL Friendly & proteksi folder via `.htaccess`
+### 🔐 Autentikasi & Session Management
+- 🔑 Login dan logout dengan sistem session yang aman.
+- 👤 Role management untuk Admin dan Pengunjung.
+
+### 🧑‍💼 CRUD Data Akun (Admin & Pengunjung)
+- ➕ Tambah, ✏️ ubah, dan 🗑️ hapus data akun admin dan pengunjung.
+- ✅ Validasi form saat input akun.
+- 📤 Upload & 👀 preview foto profil pengguna.
+
+### 🖼️ Hero Section
+- 🖼️ Gambar latar fullscreen.
+- 📝 Judul teks di tengah yang menarik perhatian.
+
+### 🏷️ Produk Grid
+- 🧱 Tampilan grid responsif dengan:
+  - 🖼️ Gambar produk.
+  - 🏷️ Judul & 📝 deskripsi singkat.
+  - 💰 Harga & ⭐ rating bintang.
+  - 🔍 Tombol "Detail" dan 🛒 tombol "Tambah ke Keranjang".
+
+### 📄 Detail Produk
+- 🧾 Halaman lengkap berisi:
+  - 🏷️ Judul & 🖼️ gambar besar produk.
+  - 📋 Deskripsi produk.
+  - ✅ Fitur utama (dalam bentuk list).
+  - ⚙️ Spesifikasi teknis.
+  - 👥 Informasi tim proyek (nama, karir, deskripsi).
+  - 🖼️ Galeri proyek.
+  - 💳 Tombol checkout langsung.
+
+
+### 💳 Halaman Checkout
+- 🧾 Form checkout berisi:
+  - 📧 Email, 🙍‍♂️ nama, 📱 nomor telepon.
+  - 💳 Metode pembayaran.
+  - 💲 Total harga.
+  - 🧾 Tombol cetak struk transaksi.
+
+### 🛒 Keranjang Kuning
+- 🟡 Ikon & tombol keranjang berwarna kuning mencolok.
+- 🧠 Dirancang untuk UX yang lebih baik.
+
+### ℹ️ About Section
+- 🧑‍💼 Profil tim atau individu.
+- 🏷️ Nama, 💼 karir, 📝 deskripsi.
+- 📞 Tombol "Hubungi" untuk mempermudah komunikasi.
+
+### 📩 Form Kontak
+- 📝 Formulir pesan pengguna.
+- 💾 Data tersimpan langsung ke database.
+
+### 📊 Dashboard Statistik
+- 📈 Statistik pengguna, produk, dan transaksi.
+- 📉 Visualisasi menggunakan Chart.js.
+
+### 📈 Tabel Interaktif
+- 🧮 Semua data ditampilkan dengan DataTables:
+  - 🔍 Fitur pencarian, 📊 pengurutan, dan 📄 pagination otomatis.
+
+### ✨ Animasi Scroll
+- 🎞️ Animasi muncul saat scroll menggunakan AOS (Animate on Scroll).
+
+### 📝 Editor Konten
+- 🧾 CKEditor diimplementasikan untuk area deskripsi yang dapat diedit.
+
+### 📁 📁 Upload & Preview Gambar
+- 📤 Fitur upload foto untuk profil, produk, dan galeri.
+- 👀 Preview langsung setelah dipilih.
+
+### 📂 Tambah & Edit Akun
+- ✅ Validasi lengkap form tambah/edit akun.
+- 🔔 Notifikasi berhasil/gagal dengan SweetAlert2.
+
+### 📉 Statistik Role Pengguna
+- 📊 Grafik pengguna berdasarkan role (Admin vs Pengunjung).
+
+### 📱 Desain Responsif
+- 📐 Menggunakan kombinasi **Bootstrap 5** dan **Tailwind CSS**.
+- 📲 Mobile-first dan kompatibel lintas perangkat.
+
+### 🌐 URL Friendly & Proteksi
+- 🔗 Struktur URL yang rapi dan ramah SEO.
+- 🛡️ Proteksi folder menggunakan `.htaccess`.
 
 ---
 
