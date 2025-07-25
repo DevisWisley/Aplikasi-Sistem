@@ -112,7 +112,7 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 
 1. 📥 **Clone repositori:**
    ```bash
-   git clone https://github.com/DevisWisley/Aplikasi-Sistem.git
+   git clone https://github.com/DevisWisley/Arsitektur.git
 
 2. 🗃️ **Import Database**
    - Buka `phpMyAdmin` atau database manager Anda.
@@ -143,6 +143,8 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 ## 🖼️ Media & File Handling
 - 📁 File Upload (PHP) – Fitur upload foto profil dengan validasi dan preview.
 - 🔍 Image Preview (JavaScript) – Menampilkan preview gambar yang diunggah sebelum disimpan ke server.
+
+---
 
 ## 🔧 Pengembangan & Testing
 
