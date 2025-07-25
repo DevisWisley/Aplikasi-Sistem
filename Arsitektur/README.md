@@ -2,13 +2,12 @@
 
 Website ini adalah sistem E-Commerce untuk jasa dan produk arsitektur, dibangun menggunakan **PHP Native** dan **MySQL** tanpa framework, serta mengandalkan kombinasi **Bootstrap 5**, **Tailwind CSS**, dan berbagai library CDN untuk tampilan yang menarik dan fungsionalitas modern.
 
-URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
-
 ---
 
 ## ✨ Fitur
 
-### 🔐 Autentikasi & Session Management
+### 🔐 Autentikasi, Registrasi & Session Management
+- 📥 Registrasi pengguna untuk membuat akun baru.
 - 🔑 Login dan logout dengan sistem session yang aman.
 - 👤 Role management untuk Admin dan Pengunjung.
 
@@ -175,15 +174,17 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 ## ▶️ Cara Menjalankan Proyek
 
 1. 📥 **Clone repositori:**
+   - Clone proyek ke komputer lokal Anda:
    ```bash
    git clone https://github.com/DevisWisley/Arsitektur.git
 
 2. 🗃️ **Import Database**
    - Buka `phpMyAdmin` atau database manager Anda.
+   - Buat database baru bernama db_architect.
    - Import file: `db_architect.sql` yang disediakan ke dalam database MySQL.
 
 3. ⚙️ **Konfigurasi Koneksi Database**
-   - Buka file `config/db.php`, sesuaikan seperti ini:
+   - Edit file `config/db.php` dan sesuaikan pengaturannya dengan database lokal Anda:
      ```php
      $host = "localhost";   // Ganti jika database di server lain
      $user = "root";        // Ganti dengan user database Anda
@@ -191,16 +192,27 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
      $db = "db_architect";  // Ganti dengan nama database Anda
      ```
 
-4. 🖥️ **Jalankan di server lokal**:
-   - Jalankan XAMPP
-   - Pindahkan folder ke direktori htdocs (jika menggunakan XAMPP).
-   - Akses via browser: `http://localhost/arsitek/`
+4. 🖥️ **Jalankan di Server Lokal**:
+   - Jalankan Apache dan MySQL aktif.
+   - Pindahkan folder hasil clone ke direktori htdocs (jika menggunakan XAMPP).
+   - Buka browser dan akses: `http://localhost/arsitek/`
 
 5. 🔐 Login Admin dan Pengunjung:
    - Gunakan akun admin dan pengunjung yang tersedia atau buat akun baru
 
 6. ✅ Proyek Siap Digunakan!
-   - Jelajahi fitur-fitur lengkap seperti CRUD akun, manajemen produk, checkout, dashboard statistik, dan lainnya.
+    - Jelajahi fitur seperti:
+        - ✏️ CRUD Akun dan Produk
+        - 📦 Manajemen Proyek Arsitektur
+        - 📊 Dashboard Statistik
+        - 🛒 Sistem Checkout
+        - 💬 Kontak
+
+---
+
+## 🌐 Demo Online
+- Website tersedia secara online di:
+    - 🔗 http://arsitektur.beauty/
 
 ---
 
@@ -218,6 +230,12 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 | 🗂️ phpMyAdmin | Antarmuka web untuk mengelola database MySQL.|
 | 🧪 Google Chrome DevTools | Untuk inspeksi elemen, debug CSS/JS, dan responsif testing.|
 | 📝 Visual Studio Code | Code editor utama yang digunakan untuk pengembangan proyek.|
+
+---
+
+## 🤝 Kontribusi
+
+Pull request sangat diterima! Untuk perubahan besar, harap buka issue terlebih dahulu untuk didiskusikan.
 
 ---
 
