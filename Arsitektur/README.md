@@ -11,9 +11,10 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 - 🔐 Autentikasi Login dan Session Management
 - 🧑‍💼 CRUD Data Akun (Admin & Pengunjung)
 - 🖼️ Hero Section (Background Gambar, Judul Tengah)
-- 🏷️ Produk Grid: Gambar, Judul, Deskripsi, Harga, Rating, Tombol Detail
+- 🏷️ Produk Grid: Gambar, Judul, Deskripsi, Harga, Rating, Tombol Detail dan Tombol Keranjang
 - 📄 Detail Produk: Judul, Gambar Produk, Deskripsi, Fitur Utama, Spesifikasi Teknis, Tim Proyek, Galeri Proyek, Tombol Checkout
 - 💳 Halaman Checkout: Email, Nama, No Telepon, Metode Pembayaran, Total, Tombol Struk
+- 🛒 Keranjang Kuning: Ikon dan tombol keranjang berwarna kuning untuk menarik perhatian pengguna dan meningkatkan pengalaman pengguna saat menambahkan produk 
 - ℹ️ About Section: Profile, Nama, Karir, Deskripsi, Tombol Hubungi
 - 📩 Form Kontak dengan penyimpanan ke database
 - 📊 Dashboard Statistik Pengguna, Produk, Transaksi (Chart.js)
@@ -49,44 +50,21 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 
 ---
 
-## 🖼️ Media & File Handling
-- 📁 File Upload (PHP) – Fitur upload foto profil dengan validasi dan preview.
-- 🖼️ Image Preview (JavaScript) – Menampilkan preview gambar yang diunggah sebelum disimpan ke server.
-
-## 🔧 Pengembangan & Testing
-
-| Tools | Deskripsi |
-|-------|-----------|
-| 🖥️ XAMPP | Local server environment untuk menjalankan PHP + MySQL secara lokal.|
-| 🗂️ phpMyAdmin | Antarmuka web untuk mengelola database MySQL.|
-| 🧪 Google Chrome DevTools | Untuk inspeksi elemen, debug CSS/JS, dan responsif testing.|
-| 📝 Visual Studio Code | Code editor utama yang digunakan untuk pengembangan proyek.|
-
----
-
-## ▶️ Cara Menjalankan
-1. 🗃️ **Import Database**  
-    Buka `phpMyAdmin` lalu **import** file `db_architect.sql`
-2. ⚙️ **Konfigurasi Database**  
-   Edit file `db.php` dan sesuaikan dengan konfigurasi MySQL kamu:
-
-   ```php
-   $host = "localhost";
-   $user = "root";
-   $password = "";
-   $db = "db_architect";
-3. 🌐 **Jalankan Aplikasi**
-    Buka browser dan akses: `http://localhost/arsitek
-
----
-
 ## 📂 Struktur Folder
 ```
 └── 📦 kelwasit
     └── 📂.history
     └── 📂.vscode
+    └── 📂controllers
+        ├── 📜 produkController.php
+        ├── 📜 transaksiController.php
     └── 📂database
         ├── 📜 code.sql
+    └── 📂pages
+        ├── 📜 checkout.php
+        ├── 📜 detail_produk.php
+        ├── 📜 keranjang.php
+        ├── 📜 struk.php
     └── 📂uploads
         └── 📂profile
             ├── 📜 devis.png
@@ -130,18 +108,74 @@ URL Aplikasi: [http://arsitektur.beauty/](http://arsitektur.beauty/)
 
 ---
 
+## ▶️ Cara Menjalankan Proyek
+
+1. 📥 **Clone repositori:**
+   ```bash
+   git clone https://github.com/DevisWisley/Aplikasi-Sistem.git
+
+2. 🗃️ **Import Database**
+   - Buka `phpMyAdmin` atau database manager Anda.
+   - Import file: `db_architect.sql` yang disediakan ke dalam database MySQL.
+
+3. ⚙️ **Konfigurasi Koneksi Database**
+   - Buka file `config/db.php`, sesuaikan seperti ini:
+     ```php
+     $host = "localhost";   // Ganti jika database di server lain
+     $user = "root";        // Ganti dengan user database Anda
+     $password = "";        // Ganti dengan password user database Anda
+     $db = "db_architect";  // Ganti dengan nama database Anda
+     ```
+
+4. 🖥️ **Jalankan di server lokal**:
+   - Jalankan XAMPP
+   - Pindahkan folder ke direktori htdocs (jika menggunakan XAMPP).
+   - Akses via browser: `http://localhost/arsitek/`
+
+5. 🔐 Login Admin dan Pengunjung:
+   - Gunakan akun admin dan pengunjung yang tersedia atau buat akun baru
+
+6. ✅ Proyek Siap Digunakan!
+   - Jelajahi fitur-fitur lengkap seperti CRUD akun, manajemen produk, checkout, dashboard statistik, dan lainnya.
+
+---
+
+## 🖼️ Media & File Handling
+- 📁 File Upload (PHP) – Fitur upload foto profil dengan validasi dan preview.
+- 🔍 Image Preview (JavaScript) – Menampilkan preview gambar yang diunggah sebelum disimpan ke server.
+
+## 🔧 Pengembangan & Testing
+
+| Tools | Deskripsi |
+|-------|-----------|
+| 🖥️ XAMPP | Local server environment untuk menjalankan PHP + MySQL secara lokal.|
+| 🗂️ phpMyAdmin | Antarmuka web untuk mengelola database MySQL.|
+| 🧪 Google Chrome DevTools | Untuk inspeksi elemen, debug CSS/JS, dan responsif testing.|
+| 📝 Visual Studio Code | Code editor utama yang digunakan untuk pengembangan proyek.|
+
+---
+
 ## 📜 Lisensi
 
 Proyek ini dikembangkan untuk kebutuhan pembelajaran dan non-komersial. Gunakan dan kembangkan kembali sesuai kebutuhan dengan menyertakan atribusi kepada pengembang asli.
 
 ---
 
-## 🙋‍♂️ Pengembang 
+## 🙋‍♂️ Pengembang
 
-**Devis Wisley**  
-📧 [deviswisley27@gmail.com](mailto:deviswisley27@gmail.com)  
-🌐 [Portfolio](https://codingindo.vercel.app/)  
-🐙 [GitHub](https://github.com/deviswisley) | 🔗 [LinkedIn](https://linkedin.com/in/devis.wisley)  
-📱 [WhatsApp](https://api.whatsapp.com/send?phone=6282274107967)
+Proyek ini dikembangkan oleh **Devis Wisley**, seorang web developer yang memiliki minat tinggi dalam pengembangan aplikasi web berbasis PHP, desain UI/UX modern, serta integrasi teknologi front-end seperti Bootstrap dan Tailwind CSS. Jika Anda memiliki pertanyaan, ingin berdiskusi, atau tertarik bekerja sama dalam proyek serupa, silakan hubungi melalui salah satu platform berikut:
+
+| Informasi Kontak | Detail |
+|------------------|--------|
+| 📛 **Nama**         | Devis Wisley |
+| 📧 **Email**        | [deviswisley27@gmail.com](mailto:deviswisley27@gmail.com) – Silakan kirim pertanyaan, kolaborasi, atau feedback proyek. |
+| 🌐 **Portfolio**    | [codingindo.vercel.app](https://codingindo.vercel.app/) – Lihat proyek-proyek lainnya yang telah dikerjakan. |
+| 🐙 **GitHub**       | [github.com/deviswisley](https://www.github.com/deviswisley) – Repositori kode sumber dan kontribusi open source. |
+| 📘 **Facebook**     | [facebook.com/devis.wisley](https://www.facebook.com/devis.wisley/) – Terhubung dan berdiskusi santai. |
+| 📸 **Instagram**    | [instagram.com/deviswisley](https://www.instagram.com/deviswisley/) – Aktivitas dan karya desain yang dibagikan secara visual. |
+| 🔗 **LinkedIn**     | [linkedin.com/in/deviswisley](https://www.linkedin.com/in/deviswisley/) – Jaringan profesional dan pengalaman kerja. |
+| 📱 **WhatsApp**     | [Chat via WhatsApp](https://api.whatsapp.com/send?phone=6282274107967) – Langsung terhubung untuk komunikasi cepat. |
 
 ---
+
+Silakan hubungi jika Anda memiliki saran, permintaan fitur tambahan, ingin memberikan dukungan, atau tertarik dengan proyek serupa.
